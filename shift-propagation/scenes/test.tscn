@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://p5eq2of57vw3"]
+
+[ext_resource type="Script" uid="uid://blrfdsvksug4j" path="res://scripts/shifter.gd" id="1_errlg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_errlg"]
+size = Vector2(1234, 43)
+
+[node name="Test" type="Node2D"]
+
+[node name="Shifter" type="Node2D" parent="."]
+position = Vector2(572, 555)
+script = ExtResource("1_errlg")
+width = 800.0
+height = 20.0
+pivdist = 40.0
+pivthick = 30.0
+metadata/_custom_type_script = "uid://blrfdsvksug4j"
+
+[node name="floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2(574, 643)
+shape = SubResource("RectangleShape2D_errlg")
+
+[node name="ColorRect" type="ColorRect" parent="floor/CollisionShape2D"]
+offset_left = -617.0
+offset_top = -21.0
+offset_right = 617.0
+offset_bottom = 21.0
