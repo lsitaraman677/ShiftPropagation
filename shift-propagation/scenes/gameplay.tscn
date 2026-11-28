@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://f34fh3uf4tdh"]
+
+[ext_resource type="Script" uid="uid://kfq28ujptth0" path="res://scripts/gameplay.gd" id="1_00tan"]
+[ext_resource type="Script" uid="uid://cjx88jgh8jrrr" path="res://scripts/rope.gd" id="2_l1v76"]
+[ext_resource type="PackedScene" uid="uid://fkyifsa2v16m" path="res://scenes/box.tscn" id="3_l1v76"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct7aa"]
+size = Vector2(1302.5, 99)
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource("1_00tan")
+
+[node name="Rope" type="Node2D" parent="."]
+position = Vector2(413, 283)
+script = ExtResource("2_l1v76")
+metadata/_custom_type_script = "uid://cjx88jgh8jrrr"
+
+[node name="Box" parent="." instance=ExtResource("3_l1v76")]
+position = Vector2(718, 181)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(606, 606)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_ct7aa")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+offset_left = -652.0
+offset_top = -51.0
+offset_right = 651.0
+offset_bottom = 47.0

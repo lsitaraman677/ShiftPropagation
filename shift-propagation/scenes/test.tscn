@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://p5eq2of57vw3"]
+[gd_scene load_steps=4 format=3 uid="uid://p5eq2of57vw3"]
 
 [ext_resource type="Script" uid="uid://blrfdsvksug4j" path="res://scripts/shifter.gd" id="1_errlg"]
+[ext_resource type="Script" uid="uid://cjx88jgh8jrrr" path="res://scripts/rope.gd" id="2_bl13t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_errlg"]
 size = Vector2(1234, 43)
@@ -8,10 +9,9 @@ size = Vector2(1234, 43)
 [node name="Test" type="Node2D"]
 
 [node name="Shifter" type="Node2D" parent="."]
-position = Vector2(572, 555)
+position = Vector2(576, 569)
 script = ExtResource("1_errlg")
 width = 800.0
-height = 20.0
 pivdist = 40.0
 pivthick = 30.0
 metadata/_custom_type_script = "uid://blrfdsvksug4j"
@@ -27,3 +27,9 @@ offset_left = -617.0
 offset_top = -21.0
 offset_right = 617.0
 offset_bottom = 21.0
+
+[node name="Rope" type="Node2D" parent="."]
+position = Vector2(345, 479)
+script = ExtResource("2_bl13t")
+numpoints = 30
+metadata/_custom_type_script = "uid://cjx88jgh8jrrr"
